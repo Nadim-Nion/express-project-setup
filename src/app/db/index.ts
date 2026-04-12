@@ -2,10 +2,11 @@ import config from '../config';
 import { UserRole } from '../modules/user/user.constant';
 import { User } from '../modules/user/user.model';
 
+
 const superUser = {
   id: '0001',
   email: 'super-admin@gmail.com',
-  password: config.super_admin_password,
+  password: config.super_admin_password || '',
   needsPasswordChange: false,
   role: UserRole.superAdmin,
   status: 'in-progress',
